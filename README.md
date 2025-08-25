@@ -1,5 +1,8 @@
 # VSCode Zen Tabs
 
+<a href="https://marketplace.visualstudio.com/items?itemName=octohash.zen-tabs" target="__blank"><img src="https://img.shields.io/visual-studio-marketplace/v/octohash.zen-tabs.svg?color=eee&amp;label=VS%20Code%20Marketplace&logo=visual-studio-code" alt="Visual Studio Marketplace Version" /></a>
+<a href="https://kermanx.github.io/reactive-vscode/" target="__blank"><img src="https://img.shields.io/badge/made_with-reactive--vscode-%23007ACC?style=flat&labelColor=%23229863"  alt="Made with reactive-vscode" /></a>
+
 A VSCode extension for managing tabs with zen-like focus — clean idle tabs, and choose where new tabs open.
 
 ## Features
@@ -23,51 +26,26 @@ Control where new tabs open and how active tabs are positioned for better workfl
 
 ## Configuration
 
-### Idle Tab Settings
+<!-- configs -->
 
-```json
-{
-  "zen-tabs.idleTimeout": 120, // Idle timeout in seconds (0 to disable)
-  "zen-tabs.idleExclusions": [ // File patterns to exclude from auto-close
-    "package.json",
-    "*.config.js",
-    "*.md"
-  ]
-}
-```
+| Key                             | Description                                                         | Type      | Default           |
+| ------------------------------- | ------------------------------------------------------------------- | --------- | ----------------- |
+| `zen-tabs.idleTimeout`          | The idle timeout in seconds.                                        | `number`  | `120`             |
+| `zen-tabs.idleExclusions`       | The list of file patterns to exclude from idle timeout.             | `array`   | `[]`              |
+| `zen-tabs.insertTabAtStart`     | Whether to insert new tabs at the start of the tab list.            | `boolean` | `true`            |
+| `zen-tabs.tabPromotionTriggers` | The list of events to detect move tab to the start of the tab list. | `array`   | `["edit","save"]` |
 
-### Tab Positioning Settings
+<!-- configs -->
 
-```json
-{
-  "zen-tabs.insertTabAtStart": true, // Insert new tabs at the start
-  "zen-tabs.tabPromotionTriggers": [ // Events that trigger tab promotion
-    "edit", // When you edit a file
-    "save" // When you save a file
-  ]
-}
-```
+## Commands
 
-## Alternative: VSCode Built-in Tab Limit
+<!-- commands -->
 
-If you need tab limit functionality, you can use VSCode's built-in tab limit configuration:
+| Command                           | Title                     |
+| --------------------------------- | ------------------------- |
+| `octohash.zen-tabs.buryActiveTab` | Zen Tabs: Bury Active Tab |
 
-```json
-{
-  "workbench.editor.limit.enabled": true,
-  "workbench.editor.limit.perEditorGroup": true,
-  "workbench.editor.limit.value": 5
-}
-```
-
-This will automatically close the least recently used tabs when you exceed the limit, providing a simpler approach to tab management.
-
-## Installation
-
-1. Open VSCode
-2. Go to Extensions (Ctrl+Shift+X)
-3. Search for "Zen Tabs"
-4. Click Install
+<!-- commands -->
 
 ## License
 
