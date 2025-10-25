@@ -2,7 +2,7 @@
   "publisher": "octohash",
   "name": "zen-tabs",
   "displayName": "Zen Tabs",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "private": true,
   "packageManager": "pnpm@10.19.0",
   "description": "A VSCode extension for managing tabs with zen-like focus — clean idle tabs, and choose where new tabs open.",
